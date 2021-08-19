@@ -5,7 +5,9 @@ VisualStudioVersion = 16.0.31515.178
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Notification.Server", "Notification.Server\Notification.Server.csproj", "{727FE8BD-A157-4616-8C62-3A3697728046}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Notifier.Common", "Notifier.Common\Notifier.Common.csproj", "{A332E178-0446-4732-8252-92A73A3DA144}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Notification.Common", "Notification.Common\Notification.Common.csproj", "{A332E178-0446-4732-8252-92A73A3DA144}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Notification.Client", "Notification.Client\Notification.Client.csproj", "{628DF079-300A-4BCE-8D70-F88098A7C443}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{A332E178-0446-4732-8252-92A73A3DA144}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A332E178-0446-4732-8252-92A73A3DA144}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A332E178-0446-4732-8252-92A73A3DA144}.Release|Any CPU.Build.0 = Release|Any CPU
+		{628DF079-300A-4BCE-8D70-F88098A7C443}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{628DF079-300A-4BCE-8D70-F88098A7C443}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{628DF079-300A-4BCE-8D70-F88098A7C443}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{628DF079-300A-4BCE-8D70-F88098A7C443}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

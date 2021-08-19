@@ -1,0 +1,12 @@
+D:\Development\SCLD-AFrey\Grpc\Grpc.Notifier\Notifier.Common\bin\Debug\net5.0\Notifier.Common.deps.json
+D:\Development\SCLD-AFrey\Grpc\Grpc.Notifier\Notifier.Common\bin\Debug\net5.0\Notifier.Common.dll
+D:\Development\SCLD-AFrey\Grpc\Grpc.Notifier\Notifier.Common\bin\Debug\net5.0\ref\Notifier.Common.dll
+D:\Development\SCLD-AFrey\Grpc\Grpc.Notifier\Notifier.Common\bin\Debug\net5.0\Notifier.Common.pdb
+D:\Development\SCLD-AFrey\Grpc\Grpc.Notifier\Notifier.Common\obj\Debug\net5.0\Notifier.Common.csproj.AssemblyReference.cache
+D:\Development\SCLD-AFrey\Grpc\Grpc.Notifier\Notifier.Common\obj\Debug\net5.0\Notifier.Common.GeneratedMSBuildEditorConfig.editorconfig
+D:\Development\SCLD-AFrey\Grpc\Grpc.Notifier\Notifier.Common\obj\Debug\net5.0\Notifier.Common.AssemblyInfoInputs.cache
+D:\Development\SCLD-AFrey\Grpc\Grpc.Notifier\Notifier.Common\obj\Debug\net5.0\Notifier.Common.AssemblyInfo.cs
+D:\Development\SCLD-AFrey\Grpc\Grpc.Notifier\Notifier.Common\obj\Debug\net5.0\Notifier.Common.csproj.CoreCompileInputs.cache
+D:\Development\SCLD-AFrey\Grpc\Grpc.Notifier\Notifier.Common\obj\Debug\net5.0\Notifier.Common.dll
+D:\Development\SCLD-AFrey\Grpc\Grpc.Notifier\Notifier.Common\obj\Debug\net5.0\ref\Notifier.Common.dll
+D:\Development\SCLD-AFrey\Grpc\Grpc.Notifier\Notifier.Common\obj\Debug\net5.0\Notifier.Common.pdb

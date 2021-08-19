@@ -25,6 +25,11 @@ namespace Notification.Server
             app.UseDeveloperExceptionPage();
 
             app.UseRouting();
+            
+            
+            app.UseAuthentication();
+            app.UseAuthorization();
+
 
             app.UseEndpoints(endpoints =>
             {

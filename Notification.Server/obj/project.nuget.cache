@@ -1,14 +1,16 @@
 {
   "version": 2,
-  "dgSpecHash": "h93V18LElk8b20YPSOLHe4GrJI67YSd58+5oGMKCYbH6Bi8ntVRaxIRhO8Cw5bwRob5mF3JNALAHuGSodZhUVg==",
+  "dgSpecHash": "bEafnXOYFQJrAXH3eUdzR1KZ5AKnoN25fTix+besBkj3hOa5U50OTXF/lpzQx6B1I1fsxF/E/3OozbJoInZKrg==",
   "success": true,
   "projectFilePath": "D:\\Development\\SCLD-AFrey\\Grpc\\Grpc.Notifier\\Notification.Server\\Notification.Server.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\afrey.STEELCLOUD\\.nuget\\packages\\google.protobuf\\3.14.0\\google.protobuf.3.14.0.nupkg.sha512",
+    "C:\\Users\\afrey.STEELCLOUD\\.nuget\\packages\\google.protobuf\\3.17.3\\google.protobuf.3.17.3.nupkg.sha512",
+    "C:\\Users\\afrey.STEELCLOUD\\.nuget\\packages\\grpc\\2.39.1\\grpc.2.39.1.nupkg.sha512",
     "C:\\Users\\afrey.STEELCLOUD\\.nuget\\packages\\grpc.aspnetcore\\2.34.0\\grpc.aspnetcore.2.34.0.nupkg.sha512",
     "C:\\Users\\afrey.STEELCLOUD\\.nuget\\packages\\grpc.aspnetcore.server\\2.34.0\\grpc.aspnetcore.server.2.34.0.nupkg.sha512",
     "C:\\Users\\afrey.STEELCLOUD\\.nuget\\packages\\grpc.aspnetcore.server.clientfactory\\2.34.0\\grpc.aspnetcore.server.clientfactory.2.34.0.nupkg.sha512",
-    "C:\\Users\\afrey.STEELCLOUD\\.nuget\\packages\\grpc.core.api\\2.34.0\\grpc.core.api.2.34.0.nupkg.sha512",
+    "C:\\Users\\afrey.STEELCLOUD\\.nuget\\packages\\grpc.core\\2.39.1\\grpc.core.2.39.1.nupkg.sha512",
+    "C:\\Users\\afrey.STEELCLOUD\\.nuget\\packages\\grpc.core.api\\2.39.1\\grpc.core.api.2.39.1.nupkg.sha512",
     "C:\\Users\\afrey.STEELCLOUD\\.nuget\\packages\\grpc.net.client\\2.34.0\\grpc.net.client.2.34.0.nupkg.sha512",
     "C:\\Users\\afrey.STEELCLOUD\\.nuget\\packages\\grpc.net.clientfactory\\2.34.0\\grpc.net.clientfactory.2.34.0.nupkg.sha512",
     "C:\\Users\\afrey.STEELCLOUD\\.nuget\\packages\\grpc.net.common\\2.34.0\\grpc.net.common.2.34.0.nupkg.sha512",
@@ -25,8 +27,7 @@
     "C:\\Users\\afrey.STEELCLOUD\\.nuget\\packages\\microsoft.extensions.primitives\\3.0.3\\microsoft.extensions.primitives.3.0.3.nupkg.sha512",
     "C:\\Users\\afrey.STEELCLOUD\\.nuget\\packages\\system.componentmodel.composition\\5.0.0\\system.componentmodel.composition.5.0.0.nupkg.sha512",
     "C:\\Users\\afrey.STEELCLOUD\\.nuget\\packages\\system.diagnostics.diagnosticsource\\4.5.1\\system.diagnostics.diagnosticsource.4.5.1.nupkg.sha512",
-    "C:\\Users\\afrey.STEELCLOUD\\.nuget\\packages\\system.memory\\4.5.3\\system.memory.4.5.3.nupkg.sha512",
-    "C:\\Users\\afrey.STEELCLOUD\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\4.5.2\\system.runtime.compilerservices.unsafe.4.5.2.nupkg.sha512"
+    "C:\\Users\\afrey.STEELCLOUD\\.nuget\\packages\\system.memory\\4.5.3\\system.memory.4.5.3.nupkg.sha512"
   ],
   "logs": []
 }
