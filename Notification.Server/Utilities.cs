@@ -25,26 +25,25 @@ namespace Notification.Server
             return p_jwtTokenHandler.WriteToken(token);
         }
 
-        internal static X509Certificate2 GetServerCert(string p_filepath, string p_filename, SecureString p_password)
+        internal static X509Certificate2 GetServerCert(string p_filepath, string p_filename, SecureString p_password, out string p_filepathfull)
         {
             X509Certificate2 cert;
+            p_filepathfull = Path.Combine(p_filepath, p_filename);
 
             if (!Directory.Exists(p_filepath))
             {
                 Directory.CreateDirectory(p_filepath);
             }
             
-            if (!File.Exists(Path.Combine(p_filepath, p_filename)))
+            if (!File.Exists(p_filepathfull))
             {
                 var kp = EncryptionEngine.GenerateNewAsymmetricRsaKeyPair(KeyLength.Length1024);
                 cert = EncryptionEngine.GenerateX509Certificate2FromRsaKeyPair(kp, "test cert");
-                EncryptionEngine.SaveX509Certificate2ToFile(cert, Path.Combine(p_filepath, p_filename), p_password);
-                Console.WriteLine($"CERT CREATED: {Path.Combine(p_filepath, p_filename)}");
+                EncryptionEngine.SaveX509Certificate2ToFile(cert, p_filepathfull, p_password);
             }
             else
             {
-                cert = EncryptionEngine.LoadX509Certificate2FromFile(Path.Combine(p_filepath, p_filename), p_password);
-                Console.WriteLine($"CERT LOADED: {Path.Combine(p_filepath, p_filename)}");
+                cert = EncryptionEngine.LoadX509Certificate2FromFile(p_filepathfull, p_password);
             }
             return cert;
         }

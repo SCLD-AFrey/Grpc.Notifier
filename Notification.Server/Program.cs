@@ -19,7 +19,9 @@ namespace Notification.Server
         private static X509Certificate2 m_cert;
         public static void Main(string[] args)
         {
-            m_cert = Utilities.GetServerCert(m_certFilePath, m_certFileName,EncryptionEngine.StringToSecureString("P@ssword"));
+            string filepathfull;
+            m_cert = Utilities.GetServerCert(m_certFilePath, m_certFileName,EncryptionEngine.StringToSecureString("P@ssword"), out filepathfull);
+            Console.WriteLine($"CERT LOADED: {filepathfull}");
             CreateHostBuilder(args).Build().Run();
         }
 

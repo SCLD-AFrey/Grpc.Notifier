@@ -8,6 +8,7 @@ package notify;
 service NotifierRpc {
   // Sends a greeting
   rpc WriteNotification (NotificationRequest) returns (NotificationReply);
+  rpc CreateCertification (CertRequest) returns (CertReply);
 }
 
 // The request message containing the user's name.
@@ -18,4 +19,12 @@ message NotificationRequest {
 // The response message containing the greetings.
 message NotificationReply {
   string message = 1;
+}
+
+message CertRequest{
+  string filename = 1;
+  string password = 2;
+}
+message CertReply{
+  string filepath = 1;
 }
