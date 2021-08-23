@@ -10,7 +10,7 @@ namespace Notification.Client
 {
     public class Utilities
     {
-        internal async static Task<GrpcChannel> CreateAuthenticatedChannel(string p_address, string p_token, X509Certificate2 p_cert, X509Certificate2 p_certClient)
+        internal async static Task<GrpcChannel> CreateAuthenticatedChannel(string p_address, string p_token, X509Certificate2 p_cert)
         {
             if (p_token == null)
             {
@@ -28,7 +28,6 @@ namespace Notification.Client
             
             var handler = new HttpClientHandler();
             handler.ClientCertificates.Add(p_cert);
-            handler.ClientCertificates.Add(p_certClient);
             var httpClient = new HttpClient(handler);
 
             var channel = GrpcChannel.ForAddress($"https://{p_address}", new GrpcChannelOptions

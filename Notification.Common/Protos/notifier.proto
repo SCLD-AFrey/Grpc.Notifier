@@ -1,5 +1,8 @@
 syntax = "proto3";
 
+import "google/protobuf/empty.proto";
+import "google/protobuf/timestamp.proto";
+
 option csharp_namespace = "Notification.Common";
 
 package notify;
@@ -9,6 +12,7 @@ service NotifierRpc {
   // Sends a greeting
   rpc WriteNotification (NotificationRequest) returns (NotificationReply);
   rpc CreateCertification (CertRequest) returns (CertReply);
+  rpc GetBroadcastStream (google.protobuf.Empty) returns (stream BroadcastData);
 }
 
 // The request message containing the user's name.
@@ -27,4 +31,9 @@ message CertRequest{
 }
 message CertReply{
   string filepath = 1;
+}
+
+message BroadcastData{
+  string message = 1;
+  google.protobuf.Timestamp timeStamp = 2;
 }

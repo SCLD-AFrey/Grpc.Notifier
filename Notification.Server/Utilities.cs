@@ -1,12 +1,16 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.IdentityModel.Tokens.Jwt;
 using System.IO;
+using System.Linq;
 using System.Security;
 using System.Security.Claims;
 using System.Security.Cryptography.X509Certificates;
 using DidiSoft.OpenSsl;
 using Microsoft.IdentityModel.Tokens;
 using SteelCloud.Encryption;
+using Notification.Common;
 
 namespace Notification.Server
 {
@@ -19,9 +23,26 @@ namespace Notification.Server
                 throw new InvalidOperationException("Username is not specified.");
             }
 
-            var claims = new[] { new Claim(ClaimTypes.Name, p_username) };
+            Collection<ClientUser> users = Common.UserRepo.users();
+
+            var user = users.Where(o => o.UserName == p_username.ToLower()).FirstOrDefault();
+
+            var claims = new List<Claim>();
+            claims.Add(new Claim(ClaimTypes.Name, user.UserName));
+            foreach (var role in user.Roles)
+            {
+                claims.Add(new Claim(ClaimTypes.Role, role));
+            }
+
             var credentials = new SigningCredentials(p_securityKey, SecurityAlgorithms.HmacSha256);
-            var token = new JwtSecurityToken("ExampleServer", "ExampleClients", claims, expires: DateTime.Now.AddSeconds(60), signingCredentials: credentials);
+            
+            var token = new JwtSecurityToken(
+                "ExampleServer", 
+                "ExampleClients", 
+                claims.ToArray(), 
+                expires: DateTime.Now.AddSeconds(60), 
+                signingCredentials: credentials);
+            
             return p_jwtTokenHandler.WriteToken(token);
         }
 
