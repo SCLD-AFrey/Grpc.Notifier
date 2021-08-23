@@ -23,7 +23,7 @@ namespace Notification.Server
                 throw new InvalidOperationException("Username is not specified.");
             }
 
-            Collection<ClientUser> users = Common.UserRepo.users();
+            Collection<UserRepo.ClientUser> users = Common.UserRepo.Users();
 
             var user = users.Where(o => o.UserName == p_username.ToLower()).FirstOrDefault();
 
@@ -31,7 +31,7 @@ namespace Notification.Server
             claims.Add(new Claim(ClaimTypes.Name, user.UserName));
             foreach (var role in user.Roles)
             {
-                claims.Add(new Claim(ClaimTypes.Role, role));
+                claims.Add(new Claim(ClaimTypes.Role, role.ToString()));
             }
 
             var credentials = new SigningCredentials(p_securityKey, SecurityAlgorithms.HmacSha256);
