@@ -171,6 +171,10 @@
               "target": "Package",
               "version": "[5.0.9, )"
             },
+            "SteelCloud.Encryption": {
+              "target": "Package",
+              "version": "[1.2.7, )"
+            },
             "System.ComponentModel.Composition": {
               "target": "Package",
               "version": "[5.0.0, )"
