@@ -9,18 +9,18 @@ using System.Security.Cryptography.X509Certificates;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Server.Kestrel.Https;
 using SteelCloud.Encryption;
+using Notification.Common;
 
 namespace Notification.Server
 {
     public class Program
     {        
-        private static string m_certFilePath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "certData");
-        private static string m_certFileName = "scld.crt";
-        private static X509Certificate2 m_cert;
+        private static readonly string CertFilePath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), Constants.CertificateFolder);
+        private static X509Certificate2 _serverCert;
         public static void Main(string[] args)
         {
             string filepathfull;
-            m_cert = Utilities.GetServerCert(m_certFilePath, m_certFileName,EncryptionEngine.StringToSecureString("P@ssword"), out filepathfull);
+            _serverCert = Utilities.GetServerCert(CertFilePath, Constants.CertificateName,EncryptionEngine.StringToSecureString(Constants.grpc.Password), out filepathfull);
             Console.WriteLine($"CERT LOADED: {filepathfull}");
             CreateHostBuilder(args).Build().Run();
         }
@@ -39,7 +39,7 @@ namespace Notification.Server
 
                                 // Verify that client certificate was issued by same CA as server certificate
                                 opt.ClientCertificateValidation = (certificate, chain, errors) =>
-                                    certificate.Issuer == m_cert.Issuer;
+                                    certificate.Issuer == _serverCert.Issuer;
                             });
                         });
                 });

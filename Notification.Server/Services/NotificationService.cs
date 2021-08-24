@@ -32,9 +32,9 @@ namespace Notification.Server
         {
             string filepath;
             var certFilePath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData),
-                "certData");
+                Constants.CertificateFolder);
             var cert = Utilities.GetServerCert(certFilePath, p_request.Filename,
-                EncryptionEngine.StringToSecureString("P@ssword"), out filepath);
+                EncryptionEngine.StringToSecureString(Constants.grpc.Password), out filepath);
             
             return Task.FromResult(new CertReply()
             {
