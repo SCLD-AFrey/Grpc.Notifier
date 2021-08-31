@@ -42,26 +42,6 @@ namespace Notification.Server
             });
 
         }
-        
-        public override async Task GetBroadcastStream(Empty _, IServerStreamWriter<BroadcastData> p_responseStream, ServerCallContext p_context)
-        {
-
-            while (!p_context.CancellationToken.IsCancellationRequested)
-            {
-                await Task.Delay(1000); // Gotta look busy
-                
-                var reply = new BroadcastData()
-                {
-                    Message = "THIS IS A MESSAGE",
-                    TimeStamp = new Timestamp()
-                };
-                await p_responseStream.WriteAsync(reply);
-            }
-
-
-
-
-        }  
-        
+       
     }
 }

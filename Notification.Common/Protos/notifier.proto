@@ -12,7 +12,6 @@ service NotifierRpc {
   // Sends a greeting
   rpc WriteNotification (NotificationRequest) returns (NotificationReply);
   rpc CreateCertification (CertRequest) returns (CertReply);
-  rpc GetBroadcastStream (google.protobuf.Empty) returns (stream BroadcastData);
 }
 
 // The request message containing the user's name.
